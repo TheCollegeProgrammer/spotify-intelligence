@@ -1,0 +1,211 @@
+/* React-specific additions kept separate from the design system. */
+
+.view-host {
+  min-height: 400px;
+}
+
+.empty-inline {
+  padding: 14px 4px;
+  font-size: 10.5px;
+  color: var(--faint);
+}
+
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+}
+
+.search-field > .lucide {
+  width: 13px;
+  height: 13px;
+  color: var(--faint);
+  flex: 0 0 13px;
+}
+
+.search-field .table-search {
+  width: 210px;
+  max-width: 38vw;
+}
+
+.cell-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.cell-stack strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.cell-stack span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 9.5px;
+  color: var(--faint);
+}
+
+.entity-top-track {
+  max-width: 58%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 9.5px;
+  color: var(--faint);
+}
+
+.modal-head-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex: 0 0 auto;
+}
+
+.modal-profile .spacer {
+  flex: 1;
+}
+
+.modal-kpi em {
+  display: block;
+  margin-top: 2px;
+  font-style: normal;
+  font-size: 9px;
+  color: var(--faint);
+}
+
+.clickable-row {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--border-soft);
+  background: none;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.clickable-row:hover {
+  color: var(--accent);
+}
+
+.clickable-row:last-child {
+  border-bottom: 0;
+}
+
+.stat-tile.warn strong {
+  color: var(--amber);
+}
+
+.stat-tile.ok strong {
+  color: var(--success);
+}
+
+.desktop-sidebar-open {
+  display: none;
+}
+
+.app.sidebar-collapsed .desktop-sidebar-open {
+  display: grid;
+}
+
+.overview-footnote,
+.quality-footnote {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-soft);
+  font-size: 9.5px;
+  color: var(--faint);
+}
+
+.overview-footnote span::before {
+  content: "·";
+  margin-right: 8px;
+  color: var(--border);
+}
+
+.overview-footnote span:first-child::before {
+  display: none;
+}
+
+.command-group {
+  padding: 7px 10px 4px;
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.command-ico {
+  display: grid;
+  place-items: center;
+  width: 23px;
+  height: 23px;
+  margin: 0 !important;
+  border-radius: 6px;
+  background: var(--card-hi);
+  color: var(--faint) !important;
+  flex: 0 0 23px;
+}
+
+.command-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  flex: 1;
+  min-width: 0;
+  margin: 0 !important;
+}
+
+.command-main strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.command-main span {
+  margin: 0 !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 9.5px;
+  color: var(--faint);
+}
+
+.command-go {
+  margin-left: auto !important;
+  font-size: 11px !important;
+  color: var(--faint) !important;
+}
+
+.toast.success .lucide {
+  color: var(--success);
+}
+
+@media (max-width: 720px) {
+  .desktop-sidebar-open {
+    display: none !important;
+  }
+
+  .overview-footnote,
+  .quality-footnote {
+    gap: 3px 10px;
+  }
+
+  .search-field .table-search {
+    width: 100%;
+    max-width: none;
+  }
+}
